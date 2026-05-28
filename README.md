@@ -1,7 +1,7 @@
 
 MINIFIER GO — GUIA COMPLETO PARA TASKER
 
-============================================================
+
 
 STEP 1 — INICIAR O SERVIDOR (Java Code)
 
@@ -19,7 +19,7 @@ rt.exec(cmd);
 
 ```
 
-============================================================
+
 
 STEP 2 — PARAR O SERVIDOR (Java Code)
 
@@ -35,7 +35,7 @@ Runtime.getRuntime().exec(new String[]{
 
 ```
 
-============================================================
+
 
 STEP 3 — VERIFICAR STATUS (Java Code — Return: %STATUS_MINIFIER)
 
@@ -60,7 +60,7 @@ return resposta;
 
 ```
 
-============================================================
+
 
 STEP 4 — MINIFICAR PASTA COMPLETA (Java Code — Return: %RESULT_MINIFY_FOLDER)
 
@@ -146,7 +146,7 @@ return resposta;
 
 ```
 
-============================================================
+
 
 STEP 6 — MINIFICAR ARQUIVO JSON (Java Code — Return: %RESULT_MINIFY_JSON)
 
@@ -186,7 +186,7 @@ return resposta;
 
 ```
 
-============================================================
+
 
 NÍVEIS DE COMPRESSÃO
 
@@ -194,7 +194,6 @@ normal      -> 30% - 50%   (compatibilidade máxima)
 aggressive  -> 50% - 65%   (recomendado para uso geral)
 maximum     -> 60% - 75%   (menor arquivo possível)
 
-============================================================
 
 ROTAS DISPONÍVEIS
 
@@ -203,13 +202,13 @@ ROTAS DISPONÍVEIS
 /minify/json   -> POST -> Minificar arquivo JSON
 /status        -> GET  -> Verificar se o servidor está rodando
 
-============================================================
+
 
 VERIFICAR STATUS NO NAVEGADOR
 
 http://localhost:7070/status
 
-============================================================
+
 
 FLUXO RECOMENDADO DA TASKER
 
@@ -221,19 +220,13 @@ FLUXO RECOMENDADO DA TASKER
 6. Flash a variável de retorno
 7. Executar STEP 2 (Parar servidor - opcional)
 
-============================================================
 
 LOCALIZAÇÃO DO BINÁRIO
 
 /data/data/net.dinglisch.android.taskerm/files/minifier/minifier_go
 
-============================================================
 
 OBSERVAÇÕES IMPORTANTES
 
 - Todos os caminhos de arquivo DEVEM ser absolutos (começando com /storage/)
 - O servidor roda na porta 7070
-- Timeout de conexão: 30 segundos
-- A pasta de saída DEVE existir antes da execução
-
-============================================================
